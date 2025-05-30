@@ -1,0 +1,348 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+     
+}
+
+
+nav {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 45px;
+    padding-left: 8%;
+    padding-right: 8%;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 1.0);
+}
+
+
+.logo{
+    color: white;
+    font-size: 35px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+span{
+    color: #f9004b;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+nav ul li a:hover{
+    color: #f9004b;
+    transition: .4s;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
+}
+
+.btn{
+    background-color: #f9004b;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bolder;
+    padding: 10px 25px;
+    transition: transform .4s;
+    border-radius: 30px;
+
+}
+.btn:hover{
+    transform: scale(1.2);
+}
+
+h1{
+    color: white;
+    margin: 20px 0px 20px;
+    font-size: 75px;
+}
+h4{
+    color: #fcfc;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+h3{
+    color: white;
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+footer {
+  position: relative;
+  width: 100%; 
+  height: auto; 
+  background: #101010; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0; 
+  color: #ffffff; 
+  font-family:  sans-serif; 
+}
+
+footer p:nth-child(1){
+    color: white;
+    font-size: 17px;
+    width: 500px;
+    text-align: center;
+    line-height: 26px;
+}
+.social{
+    display: flex;
+}
+.social a{
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f9004b;
+    border-radius: 50%;
+    margin: 28px 50px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.social a:hover{
+    transform: scale(1.3);
+    transition: .3s;
+
+}
+.skills {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.skills .title h2 {
+    margin-bottom: 30px;
+    font-size: 36px;
+    color: #333;
+}
+
+.skills .skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.skills .skills-list h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.skills .skills-list .progress {
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.skills .skills-list .progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #f9004b;
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+/* Add animation for progress bar */
+@keyframes progressBar {
+    from { width: 0; }
+}
+
+.skills .skills-list .progress-bar.animate {
+    animation: progressBar 1s forwards;
+}
+
+#portfolio{
+    padding: 50px 0;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top:50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    padding:0 40px;
+    text-align: center;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+
+}
+
+.layer a{
+    margin-bottom: 20px;
+    color: #ff004f;text-decoration: none;
+    font-size: 18px;
+    text-decoration: none;
+    line-height: 60px;
+    background: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+.butn{
+    background-color: #f9004b;
+    display: block;
+    margin:50px auto;
+    width: fit-content;
+    border: 2px solid transparent;
+    padding:10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #fff;
+    transition: trannsform 0.4s;
+}
+.butn:hover{
+    transform: scale(1.2);
+}
+
+/* Breakpoint for tablet to laptop devices */
+@media only screen and (max-width: 1024px) {
+  .hero {
+   
+    height: auto; 
+  }
+
+  .main, .title h2 {
+   
+    width: 90%; 
+    margin: 0 auto; 
+  }
+
+  .box {
+    flex-direction: column; 
+  }
+
+  .newsletter form input:first-child, .newsletter form input:last-child {
+    width: 90%; 
+    margin: 0 auto; 
+    display: block; 
+  }
+
+  .newsletter form input:last-child {
+    right: 0; 
+    margin-top: 10px; 
+  }
+}
+
+/* Mobile devices */
+@media only screen and (max-width: 768px) {
+  
+  nav {
+    flex-direction: column;
+    padding-top: 20px;
+  }
+  
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    padding: 5px; 
+  }
+
+  .btn {
+    margin-top: 10px; 
+  }
+
+  
+  .hero {
+    background-size: auto; 
+  }
+
+  .content, .about-text, .newsletter form {
+    width: 100%; 
+    padding: 0 20px; 
+  }
+
+  .content h1, .content h3, .about h2, .title h2, .card h5 {
+    font-size: smaller; 
+  }
+
+  .newsletter form input[type="email"], .newsletter form input[type="submit"] {
+    width: auto; 
+    padding: 10px; 
+  }
+
+  .newsletter form input[type="submit"] {
+    position: relative; 
+    top: 0;
+    right: 0;
+    margin: 10px auto; 
+    display: block; 
+  }
+
+  .main, .box {
+    flex-direction: column; 
+  }
+
+  .about img, .card {
+    width: 90%; 
+    margin: 0 auto; 
+  }
+
+  .service, .contact {
+    padding: 50px 20px; 
+  }
+
+  footer p:nth-child(1) {
+    width: auto;
+    padding: 0 20px;
+  }
+}
